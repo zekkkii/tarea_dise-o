@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <form id="form" class="w-50" action="/formulario" method="POST">
+      <h1 class="my-3">Llena el siguiente formulario.</h2>
+  
+      <div class="form-group mb-2">
+        <label class="form-label" for="nombre">Nombre <small class="text-danger">*Obligatorio</small></label>
+        <input type="text" class="form-control" id="nombre" name="nombre">
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="apellido">Apellido <small class="text-danger">*Obligatorio</small></label>
+        <input type="text" class="form-control" id="apellido" name="apellido">
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="cedula">Cedula <small class="text-danger">*Obligatorio</small></label>
+        <input type="text" class="form-control" id="cedula" name="cedula">
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="direccion">Direccion personal<small class="text-danger">*Obligatorio</small></label>
+        <input type="text" class="form-control" id="direccion" name="direccion">
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="agresor">Nombre del agresor</label>
+        <input type="text" class="form-control" id="agresor" name="agresor">
+      </div>
+       <div class="form-group mb-2">
+        <label class="form-label" for="direccion-agresor">Direccion del agresor<small class="text-primary">*Si vive en el mismo hogar solo menciona algo como: "Misma direccion"</small></label>
+        <input type="text" class="form-control" id="direccion-agresor" name="direccion-agresor">
+      </div>
+      <div class="form-group mb-2">
+          <label>Tipo de agresion</label>
+        <fieldset class="d-flex justify-content-center rounded">
+          <div class="m-2 form-check">
+            <input class="form-check-input" type="checkbox" name="agresion" id="" value="Verbal">
+            <label for="">Verbal</label>
+          </div>
+          <div class="m-2 form-check">
+            <input class="form-check-input" type="checkbox" name="agresion" id="" value="Fisico">
+            <label for="">Fisico</label>
+          </div>
+          <div class="m-2 form-check">
+            <input class="form-check-input" type="checkbox" name="agresion" id="" value="Psicologico">
+            <label for="">Psicologico</label>
+          </div>
+          <div class="m-2 form-check">
+            <input class="form-check-input" type="checkbox" name="agresion" id="sexual" value="sexual">
+            <label for="sexual">Sexual</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group mb-2">
+        <label class="form-label" for="detalles">Detalle las agresiones <small class="text-danger">*Obligatorio</small></label>
+        <textarea name="detalles" id="detalles" class='form-control'></textarea>
+      </div>
+       <div class="form-group mb-2">
+        <label class="form-label" for="detalles">Nombre otros miembros afectados en el hogar<small class="text-danger">*Solo si aplica</small></label>
+        <textarea name="detalles" id="detalles" class='form-control'></textarea>
+      </div>
+       <div class="form-group mb-2">
+        <label class="form-label" for="detalles">Sube imagenes/pruebas de la agresion <small class="text-primary">*Esto ayudara a justificar la denuncia, no te preocupes si no cuentas con pruebas.</small></label>
+        <input class="form-control" type="file" name="img" id="img" accept="image/*" multiple>
+      </div>
+
+    <div class="float-end">
+      <input  id='submit' type="submit" class="btn btn-success rounded " value="Enviar">
+    </div>
+  </form>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="d-flex">
+  <div class=" px-5 bg-dark vh-100 text-white">
+    <div class="text-center text-white font-weight-bold mt-4">
+      <div>
+        <i class="bi bi-card-text"></i>
+      </div>
+      <a  style="font-size: 20px;" href="#">Casos Reportados</a>
+    </div>
+
+    <div style="font-size: 20px;" class="text-center text-white  mt-5">
+     <div>
+        <i class="bi bi-clipboard-data"></i>
+     </div>
+      <a href="#" class="font-wight-bold" href="/reportes">Estadisticas</a>
+    </div>
+
+     <div  style="font-size: 20px;"  class="text-center text-white  mt-5">
+       <i class="bi bi-folder2-open"></i>
+      <p class="font-wight-bold">Historial Usuarios</p>
+    </div>
+
+    <div  style="font-size: 20px;"  class="text-center text-white  mt-5">
+      <i class="bi bi-patch-question"></i>
+      <p class="font-wight-bold">Manual Ayuda</p>
+    </div>
+    
+
+  </div>
+
+  <div class="mx-5" style="width: 75vw">
+   {{#each data}}
+    <div style="background-color: #cccccc;" class="d-flex justify-content-between w-100 p-3 my-3 rounded">
+      <div>
+        <i class="text-danger h3 bi bi-shield-exclamation"></i>
+        <span class="mx-3">Nombre: {{nombre}}, Cedula: {{cedula}}, Direccion: {{direccion}}</span>
+      </div>
+      <div class="float-right">
+        {{#if status}}
+        <button  disabled class="btn btn-success ">pendiente</button>
+        {{else}}
+        <form action="/reportes/atendido/{{id}}" method="post">
+          <button class="btn btn-danger ">Atender</button>
+        </form>
+        {{/if}}
+      </div>
+    </div>
+   {{/each}}
+  </div>
+
+</div>

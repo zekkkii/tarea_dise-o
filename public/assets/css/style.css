@@ -1,0 +1,33 @@
+.box {
+  background-image: url('../img/violencia.png');
+  background-position: center;
+}
+i {
+    text-shadow: 2px 2px 5px rgb(224, 224, 224);
+}
+
+#help-icon {
+  visibility: hidden;
+}
+
+.info   {
+  display: none;
+  box-shadow: 5px 5px 20px rgb(36, 36, 36);
+}
+
+.text-center.p-5 {
+  box-shadow: 5px 5px 20px rgb(36, 36, 36);
+}
+
+#help-icon:checked ~ .info   {
+  display: block;
+}
+
+fieldset {
+  border: 1px solid  #ced4da;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
